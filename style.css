@@ -88,12 +88,7 @@ img {
   height: auto;
 }
 
-/* Use % or viewport units for layout */
-.container {
-  width: 90%;   /* E.g. 90% of the screen */
-  margin: auto;
-}
-  
+
 
 }
 
