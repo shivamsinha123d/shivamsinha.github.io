@@ -75,7 +75,7 @@ h4 {
   margin: 0;
 }
 
-/* Responsive layout */
+
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5rem;
