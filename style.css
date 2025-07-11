@@ -1,97 +1,84 @@
-
 body {
   margin: 0;
-  padding: 0;
-  
-  background-color: #fdfdfd;
-  color: #333;
-  line-height: 1.6;
+  padding: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: white;
+  color: black;
 }
-
 
 h1 {
   text-align: center;
-  font-size: 2.2rem;
-  margin: 2rem 0 1rem;
-  color: #1a1a1a;
+  font-size: 2rem;
 }
-
 
 .menu {
   list-style: none;
+  padding: 0;
+  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0;
-  margin: 1rem 0;
-  background-color: #f0f0f0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  gap: 1rem;
 }
 
 .menu li {
-  margin: 0.5rem 1rem;
+  display: inline-block;
 }
 
 .menu a {
   text-decoration: none;
-  color: #0077cc;
-  font-weight: 600;
+  color: blue;
+  font-weight: bold;
   font-size: 1rem;
-  transition: color 0.2s ease;
 }
 
-.menu a:hover {
-  color: #005999;
+main {
+  max-width: 800px;
+  margin: 1rem auto;
 }
 
-
-main, .myposts, .myprojects {
-  max-width: 900px;
-  margin: 1.5rem auto;
-  padding: 1rem 1.5rem;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-h2, h3, h4, h5 {
-  margin: 0.5rem 0;
-}
-
-ul.one {
+.one {
   list-style: none;
-  padding: 0;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
+.myposts,
+.myprojects {
+  list-style: none;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background-color: #f9f9f9;
+}
 
 .myposts li,
 .myprojects li {
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
   margin: 0.5rem 0;
 }
 
-
-.menu:last-of-type {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: none;
-  background: transparent;
+h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-.menu:last-of-type li a img {
-  margin-right: 8px;
+h4 {
+  font-size: 1rem;
+  margin: 0;
 }
 
-
-@media (max-width: 700px) {
+/* Responsive layout */
+@media (max-width: 600px) {
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .menu {
@@ -103,8 +90,5 @@ hr {
     margin: 0.5rem 0;
   }
 
-  main, .myposts, .myprojects {
-    padding: 1rem;
-    margin: 1rem;
-  }
-}
+  .one,
+  .
