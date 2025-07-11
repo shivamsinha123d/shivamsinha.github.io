@@ -8,19 +8,22 @@ body {
 }
 
 h1 {
-  text-align: center;
+  
   font-size: 2rem;
 }
 
 .menu {
   list-style: none;
-  padding: 0;
-  margin: 1rem 0;
+  padding: 0.5rem;
+  margin: 1rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+  background-color: rgb(237, 234, 234);
+  justify-content: center;
 }
+
 
 .menu li {
   display: inline-block;
@@ -40,6 +43,8 @@ main {
 
 .one {
   list-style: none;
+  font-size: 0.9rem;
+
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -75,7 +80,7 @@ h4 {
   margin: 0;
 }
 
-/* Responsive design for mobile */
+/*  for mobile */
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5rem;
