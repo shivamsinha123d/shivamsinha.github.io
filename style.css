@@ -1,92 +1,97 @@
-/* Base Styles */
+
 body {
   margin: 0;
-  padding: 1rem;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
   line-height: 1.6;
-  background-color: #fff;
-  color: #222;
 }
 
-/* Headings */
+
 h1 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin: 2rem 0 1rem;
+  color: #1a1a1a;
 }
 
-/* Menu Styles */
+
 .menu {
   list-style: none;
-  padding: 0;
-  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .menu li {
-  display: inline-block;
+  margin: 0.5rem 1rem;
 }
 
 .menu a {
   text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
+  color: #0077cc;
+  font-weight: 600;
   font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
-/* Main Content */
-main {
-  margin: 1rem auto;
-  max-width: 800px;
+.menu a:hover {
+  color: #005999;
 }
 
-.one {
+
+main, .myposts, .myprojects {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2, h3, h4, h5 {
+  margin: 0.5rem 0;
+}
+
+ul.one {
   list-style: none;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  padding: 0;
 }
 
-/* Blog & Projects Sections */
-.myposts, .myprojects {
-  list-style: none;
-  padding: 1rem;
-  background-color: #f0f0f0;
-  margin: 1rem auto;
-  max-width: 800px;
-  border-radius: 8px;
-}
 
 .myposts li,
 .myprojects li {
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #ddd;
+  margin: 0.5rem 0;
 }
 
-/* Small Headings */
-h5 {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+
+.menu:last-of-type {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: none;
+  background: transparent;
 }
 
-h4 {
-  font-size: 1rem;
-  margin: 0;
+.menu:last-of-type li a img {
+  margin-right: 8px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
+
+@media (max-width: 700px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .menu {
@@ -98,7 +103,8 @@ h4 {
     margin: 0.5rem 0;
   }
 
-  .one, .myposts, .myprojects {
-    padding: 0.8rem;
+  main, .myposts, .myprojects {
+    padding: 1rem;
+    margin: 1rem;
   }
 }
