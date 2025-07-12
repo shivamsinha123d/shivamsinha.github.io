@@ -19,7 +19,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   background-color: rgb(237, 234, 234);
   justify-content: center;
 }
