@@ -1,86 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 1 - Calculator</title>
+  <title>Day 1:Calculator in C</title>
+ 
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <h2>Project 1: Simple Calculator</h2>
-  <p>
-    This is my first C project — a simple calculator that can perform 
-    addition, subtraction, multiplication, and division.  
-    It also stores a short history of calculations.
-    You may run it on <a href="programiz.com">Programiz.com</a>voiurite online compiler.This is one of my fa
-  </p>
+  <ul class="menu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="https://github.com/shivamsinha123d" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" style="vertical-align: middle;">
+            GitHub
+        </a>
+    </li>    
+    <li><a href="../social.html">Social</a></li>
+  </ul>
 
-  <h3>💻 C Program</h3>
-  <pre><code>
-#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
-#include &lt;string.h&gt;
-#define MAX 10
+  <div >
+    <ul class="fullblog">
+    <h1>Project1 : Calculator using C</h1>
+    <small>Posted on August 20, 2025</small>
+    <p>Today I am uploading  my first project using C. I made a Calculator using c which also stores history upto last 10 calculations. You can also access it.You may view its code on <a href="https://github.com/shivamsinha123d/calculator.c">this link.</a>Also you may run it on your own c compiler or <a href="https://www.programiz.com/c-programming/online-compiler/">programiz.</a>this is one of my favourite online compiler.</p>
+    <p>I Would make many such projects and improve my knowledge regarding computer. I am just not interested in coding but the real computer engineering so would explore that way also in future.</p>
+    <p>Thank you for viewing my project. I hope you liked it :)</p>
+    </ul>
+  </div>
+  
+<!--View my vlogs-->
+  <hr>
+    <h4>View my blogs</h4>
+    <ul class="myposts">
+        <h4>
+        <li><a href="posts/day1.html">POST1: Starting with C language</a></li>
+        <hr>
+        <li><a href="posts/day2.c">learning c</a></li>
+        <hr>
+        <li><a href="posts/day3.c">learning c</a></li>
+        <hr>
 
-int main() {
-    float num1, num2;
-    int operations;
-    int option; 
-    char history[MAX][50];
-    int count = 0;
-    char entry[50];
 
-    while(1) {
-        printf("choose option\n0:exit\n1:calculator\n2:history\n");
-        scanf("%d", &option);
-
-        if (option == 0)
-            break;
-
-        if (option == 1) {
-            printf("Enter two numbers: ");
-            scanf("%f %f", &num1, &num2);
-
-            printf("Choose operation: 1:Add 2:Subtract 3:Multiply 4:Divide\n");
-            scanf("%d", &operations);
-
-            float result;
-            switch(operations) {
-                case 1: result = num1 + num2; sprintf(entry, "%.2f + %.2f = %.2f", num1, num2, result); break;
-                case 2: result = num1 - num2; sprintf(entry, "%.2f - %.2f = %.2f", num1, num2, result); break;
-                case 3: result = num1 * num2; sprintf(entry, "%.2f * %.2f = %.2f", num1, num2, result); break;
-                case 4: 
-                    if (num2 != 0) { result = num1 / num2; sprintf(entry, "%.2f / %.2f = %.2f", num1, num2, result); }
-                    else sprintf(entry, "Division by zero not allowed!");
-                    break;
-                default: sprintf(entry, "Invalid operation");
-            }
-
-            printf("%s\n", entry);
-            strcpy(history[count % MAX], entry);
-            count++;
-        }
-
-        else if (option == 2) {
-            printf("\n--- History ---\n");
-            int start = count > MAX ? count - MAX : 0;
-            for (int i = start; i < count; i++) {
-                printf("%s\n", history[i % MAX]);
-            }
-        }
-    }
-    return 0;
-}
-  </code></pre>
-
-  <h3>📝 Explanation</h3>
-  <p>
-    - The calculator supports <b>+ - × ÷</b>.  
-    - Stores last <b>10 calculations</b> in history.  
-    - Uses <code>sprintf</code> to save results in a string format.  
-    - Uses <code>count % MAX</code> to overwrite old history when limit is reached.
-  </p>
-
-  <a href="../index.html">⬅ Back to Home</a>
+        </h4>
+        
+        
+    </ul>
+    <!--socialmedia--> 
+    
+    <ul class="menu">
+        
+        
+        <li><a href="https://github.com/shivamsinha123d"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20" style="vertical-align: middle;">Github</a></li>
+        <li><a href=""><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter Logo" width="20" style="vertical-align: middle;">Twitter</a></li>
+        <li><a href=""><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Logo" width="20" style="vertical-align: middle;">LinkedIn</a></li>
+        <li><a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" width="20" style="vertical-align: middle;">Youtube</a></li>
+        <li><a href="mailto:shvm123d@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg "width="20" style="vertical-align: middle;" >Mail</a></li>
+    </ul>
+    
 </body>
 </html>
