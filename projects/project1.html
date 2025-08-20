@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 - Calculator</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h2>Project 1: Simple Calculator</h2>
+  <p>
+    This is my first C project — a simple calculator that can perform 
+    addition, subtraction, multiplication, and division.  
+    It also stores a short history of calculations.
+    You may run it on <a href="programiz.com">Programiz.com</a>voiurite online compiler.This is one of my fa
+  </p>
+
+  <h3>💻 C Program</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include &lt;string.h&gt;
+#define MAX 10
+
+int main() {
+    float num1, num2;
+    int operations;
+    int option; 
+    char history[MAX][50];
+    int count = 0;
+    char entry[50];
+
+    while(1) {
+        printf("choose option\n0:exit\n1:calculator\n2:history\n");
+        scanf("%d", &option);
+
+        if (option == 0)
+            break;
+
+        if (option == 1) {
+            printf("Enter two numbers: ");
+            scanf("%f %f", &num1, &num2);
+
+            printf("Choose operation: 1:Add 2:Subtract 3:Multiply 4:Divide\n");
+            scanf("%d", &operations);
+
+            float result;
+            switch(operations) {
+                case 1: result = num1 + num2; sprintf(entry, "%.2f + %.2f = %.2f", num1, num2, result); break;
+                case 2: result = num1 - num2; sprintf(entry, "%.2f - %.2f = %.2f", num1, num2, result); break;
+                case 3: result = num1 * num2; sprintf(entry, "%.2f * %.2f = %.2f", num1, num2, result); break;
+                case 4: 
+                    if (num2 != 0) { result = num1 / num2; sprintf(entry, "%.2f / %.2f = %.2f", num1, num2, result); }
+                    else sprintf(entry, "Division by zero not allowed!");
+                    break;
+                default: sprintf(entry, "Invalid operation");
+            }
+
+            printf("%s\n", entry);
+            strcpy(history[count % MAX], entry);
+            count++;
+        }
+
+        else if (option == 2) {
+            printf("\n--- History ---\n");
+            int start = count > MAX ? count - MAX : 0;
+            for (int i = start; i < count; i++) {
+                printf("%s\n", history[i % MAX]);
+            }
+        }
+    }
+    return 0;
+}
+  </code></pre>
+
+  <h3>📝 Explanation</h3>
+  <p>
+    - The calculator supports <b>+ - × ÷</b>.  
+    - Stores last <b>10 calculations</b> in history.  
+    - Uses <code>sprintf</code> to save results in a string format.  
+    - Uses <code>count % MAX</code> to overwrite old history when limit is reached.
+  </p>
+
+  <a href="../index.html">⬅ Back to Home</a>
+</body>
+</html>
